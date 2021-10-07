@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-image: url(./abstract-pastel-holographic-textured-background.jpg);
+  height: 100vh;
 }
 
 .App-logo {
@@ -14,12 +16,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: rgb(235, 172, 180);
   font-size: calc(10px + 2vmin);
   color: white;
 }
