@@ -1,21 +1,39 @@
-import astro from "./img/astro.png";
+import astro from "../../img/astro.png";
 
 export function Navbar() {
   return (
     <nav className="navbar">
-      <a href="#" className="nav-brand">
-        Tienda Moon
-      </a>
-      <img src={astro} alt="logo" width="30" height="30" />
+      <div className="logo-moon">
+        <a className="nav-brand" href={"#"}>
+          Tienda Moon
+        </a>
+        <img src={astro} alt="logo" width="60" height="60" />
+      </div>
+
       <ul className="navbar-list">
         <li className="nav-item">
-          <a className="nav-link" href="#">
-            Home
+          <a className="nav-link" href={"#"}>
+            New
           </a>
         </li>
         <li className="nav-item">
-          <a href="#" className="nav-link">
-            Colecciones
+          <a className="nav-link" href={"#"}>
+            Bebés
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href={"#"}>
+            Niñxs
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href={"#"}>
+            Niñxs +10
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href={"#"}>
+            SALE!
           </a>
         </li>
       </ul>
