@@ -4,7 +4,7 @@ export function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo-moon">
-        <a className="nav-brand" href={"#"}>
+        <a className="nav-brand" href="/#">
           Tienda Moon
         </a>
         <img src={astro} alt="logo" width="60" height="60" />
@@ -12,27 +12,27 @@ export function Navbar() {
 
       <ul className="navbar-list">
         <li className="nav-item">
-          <a className="nav-link" href={"#"}>
+          <a className="nav-link" href="/#">
             New
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href={"#"}>
+          <a className="nav-link" href="/#">
             Bebés
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href={"#"}>
+          <a className="nav-link" href="/#">
             Niñxs
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href={"#"}>
+          <a className="nav-link" href="/#">
             Niñxs +10
           </a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href={"#"}>
+          <a className="nav-link" href="/#">
             SALE!
           </a>
         </li>
