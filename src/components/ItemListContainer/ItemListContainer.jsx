@@ -1,3 +1,5 @@
+import "./ItemListContainer.css";
+
 import { Item } from "../Item/Item";
 import grisino1 from "../../img/grisino1.jpg";
 import grisino2 from "../../img/grisino2.jpg";

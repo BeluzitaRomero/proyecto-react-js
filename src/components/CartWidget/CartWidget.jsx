@@ -1,3 +1,4 @@
+import "./CartWidget.css";
 import cart from "../../img/shoppingCart.png";
 
 export const CartWidet = (props) => {

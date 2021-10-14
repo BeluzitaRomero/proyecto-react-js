@@ -1,3 +1,4 @@
+import "./NavBar.css";
 import astro from "../../img/astro.png";
 import { CartWidet } from "../CartWidget/CartWidget";
 
