@@ -39,7 +39,9 @@ export function Navbar() {
           </a>
         </li>
       </ul>
-      <CartWidet />
+      <div className="carrito">
+        <CartWidet />
+      </div>
     </nav>
   );
 }
