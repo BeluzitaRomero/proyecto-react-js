@@ -11,9 +11,9 @@ function App() {
       <header className="App-header">
         <Navbar />
       </header>
-      <section>
+      <main>
         <ItemListContainer text="Bienvenidx a Tienda Moon" />
-      </section>
+      </main>
     </div>
   );
 }
