@@ -1,4 +1,5 @@
 import astro from "../../img/astro.png";
+import { CartWidet } from "../CartWidget/CartWidget";
 
 export function Navbar() {
   return (
@@ -7,7 +8,7 @@ export function Navbar() {
         <a className="nav-brand" href="/#">
           Tienda Moon
         </a>
-        <img src={astro} alt="logo" width="60" height="60" />
+        <img src={astro} alt="logo" width="80" height="80" />
       </div>
 
       <ul className="navbar-list">
@@ -37,6 +38,7 @@ export function Navbar() {
           </a>
         </li>
       </ul>
+      <CartWidet />
     </nav>
   );
 }

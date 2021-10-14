@@ -1,0 +1,20 @@
+h1 {
+  margin: 2rem;
+  color: rgb(85, 82, 245);
+}
+
+.itemListContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card-body {
+  color: rgb(85, 82, 245);
+}

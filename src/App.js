@@ -1,7 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "./components/NavBar/NavBar.css";
+import "./components/CartWidget/CartWidget.css";
+import "./components/ItemListContainer/ItemListContainer.css";
 import { Navbar } from "./components/NavBar/NavBar";
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 
 function App() {
   return (
@@ -9,18 +11,9 @@ function App() {
       <header className="App-header">
         <Navbar />
       </header>
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
+      <section>
+        <ItemListContainer text="Bienvenidx a Tienda Moon" />
+      </section>
     </div>
   );
 }
