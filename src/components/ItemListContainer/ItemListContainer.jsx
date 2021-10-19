@@ -6,11 +6,12 @@ import grisino2 from "../../img/grisino2.jpg";
 import grisino3 from "../../img/grisino3.jpg";
 import grisino4 from "../../img/grisino4.jpg";
 import grisino6 from "../../img/grisino6.jpg";
+import { ItemCount } from "../ItemCount/ItemCount";
 
 export const ItemListContainer = (props) => {
   return (
     <div className="itemListContainer">
-      <h1>{props.text}</h1>;
+      <h1>{props.text}</h1>
       <div className="items">
         <Item
           img={grisino1}
@@ -38,6 +39,7 @@ export const ItemListContainer = (props) => {
           text="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
         />
       </div>
+      <ItemCount stock={10} initial={1} />
     </div>
   );
 };

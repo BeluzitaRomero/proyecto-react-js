@@ -1,0 +1,18 @@
+.itemCount {
+  background-color: rgb(255, 255, 255);
+  width: 20rem;
+  margin: 2rem;
+}
+
+.seleccion {
+  margin: 2rem;
+}
+
+.cantidad-seleccionada {
+  display: flex;
+  justify-content: center;
+}
+
+.producto-seleccionado {
+  margin: 0 3rem;
+}
