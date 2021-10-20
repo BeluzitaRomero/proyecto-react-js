@@ -11,6 +11,7 @@
 .cantidad-seleccionada {
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .producto-seleccionado {

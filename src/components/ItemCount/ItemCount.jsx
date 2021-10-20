@@ -2,16 +2,16 @@ import "./ItemCount.css";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 
-export function ItemCount(props) {
-  const [count, setCount] = useState(0);
+export function ItemCount({ stock, initial }) {
+  const [count, setCount] = useState(initial);
 
   const addItem = () => {
-    if (count < props.stock) setCount(count + 1);
-    console.log(props.stock);
+    if (count < stock) setCount(count + 1);
+    console.log(stock);
   };
   const decreaseItem = () => {
-    if (count >= props.initial) setCount(count - 1);
-    console.log(props.initial);
+    if (count > initial) setCount(count - 1);
+    console.log(initial);
   };
 
   return (
@@ -21,12 +21,11 @@ export function ItemCount(props) {
           <Button variant="primary" onClick={decreaseItem}>
             -
           </Button>
-          <p className="producto-seleccionado">Producto</p>
+          <p className="producto-seleccionado">{count}</p>
           <Button variant="primary" className="addBtn" onClick={addItem}>
             +
           </Button>
         </div>
-        <p>{count}</p>
 
         <Button variant="primary">Agregar producto</Button>
       </div>
