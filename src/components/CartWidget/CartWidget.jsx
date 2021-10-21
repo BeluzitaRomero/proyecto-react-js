@@ -1,5 +1,5 @@
 import "./CartWidget.css";
-import cart from "../../img/shoppingCart.png";
+import cart from "../../assets/shoppingCart.png";
 
 export const CartWidet = (props) => {
   return (

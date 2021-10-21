@@ -1,5 +1,5 @@
 import "./NavBar.css";
-import astro from "../../img/astro.png";
+import astro from "../../assets/astro.png";
 import { CartWidet } from "../CartWidget/CartWidget";
 
 export function Navbar() {
