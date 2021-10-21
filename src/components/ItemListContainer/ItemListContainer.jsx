@@ -3,7 +3,7 @@ import Productos from "../../../src/Productos.json";
 import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 
-export const ItemListContainer = () => {
+export const ItemListContainer = ({ title }) => {
   const [productos, setProductos] = useState([]);
 
   const getProductos = (data) =>
@@ -25,7 +25,8 @@ export const ItemListContainer = () => {
 
   return (
     <div className="itemListContainer">
-      <h1>SALE!</h1>
+      <h1>Bienvenidx a Tienda Moon</h1>
+      <h2>{title}</h2>
       <div className="listaProductos">
         {productos.length
           ? productos.map((producto) => (

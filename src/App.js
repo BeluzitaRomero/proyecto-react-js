@@ -10,7 +10,7 @@ function App() {
         <Navbar />
       </header>
       <main>
-        <ItemListContainer text="Bienvenidx a Tienda Moon" />
+        <ItemListContainer title="SALE!" />
       </main>
     </div>
   );
