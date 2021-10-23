@@ -2,7 +2,6 @@ import "./ItemListContainer.css";
 import Productos from "../../../src/Productos.json";
 import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
-import { ItemCount } from "../ItemCount/ItemCount";
 
 export const ItemListContainer = ({ title }) => {
   const [productos, setProductos] = useState([]);
@@ -31,7 +30,6 @@ export const ItemListContainer = ({ title }) => {
       <div className="listaProductos">
         <ItemList items={productos} />
       </div>
-      <ItemCount stock={10} initial={1} />
     </div>
   );
 };
