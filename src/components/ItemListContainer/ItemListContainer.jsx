@@ -2,6 +2,7 @@ import "./ItemListContainer.css";
 import Productos from "../../../src/Productos.json";
 import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
+import { ItemCount } from "../ItemCount/ItemCount";
 
 export const ItemListContainer = ({ title }) => {
   const [productos, setProductos] = useState([]);
@@ -28,12 +29,9 @@ export const ItemListContainer = ({ title }) => {
       <h1>Bienvenidx a Tienda Moon</h1>
       <h2>{title}</h2>
       <div className="listaProductos">
-        {productos.length
-          ? productos.map((producto) => (
-              <ItemList items={producto} key={producto.id} />
-            ))
-          : "Loading..."}
+        <ItemList items={productos} />
       </div>
+      <ItemCount stock={10} initial={1} />
     </div>
   );
 };

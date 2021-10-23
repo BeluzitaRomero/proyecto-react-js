@@ -1,17 +1,16 @@
 import { Card } from "react-bootstrap";
-// import { Button } from "react-bootstrap";
-import { ItemCount } from "../ItemCount/ItemCount";
+import { Button } from "react-bootstrap";
 
-export const Item = ({ id, name, precio, descripcion, img }) => {
+export const Item = ({ item }) => {
   return (
-    <Card key={id} style={{ width: "16rem" }}>
-      <Card.Img variant="top" src={img} />
+    <Card key={item.imgid} style={{ width: "16rem" }}>
+      <Card.Img variant="top" src={item.img} />
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>{descripcion}</Card.Text>
-        <p>${precio}</p>
-        <ItemCount stock={10} initial={1} />
-        {/* <Button variant="primary">Agregar al carrito</Button> */}
+        <Card.Title>{item.name}</Card.Title>
+        <Card.Text>{item.descripcion}</Card.Text>
+        <p>${item.precio}</p>
+
+        <Button variant="primary">Agregar al carrito</Button>
       </Card.Body>
     </Card>
   );
