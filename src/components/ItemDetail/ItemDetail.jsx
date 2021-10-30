@@ -9,6 +9,7 @@ export function ItemDetail({ details }) {
       <div className="detalle">
         <h1>{details.name}</h1>
         <p>{details.descripcion}</p>
+        <p>${details.precio}</p>
         <ItemCount />
       </div>
     </div>
