@@ -1,0 +1,10 @@
+.itemDetail {
+  display: flex;
+  justify-content: center;
+}
+
+.detalle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
