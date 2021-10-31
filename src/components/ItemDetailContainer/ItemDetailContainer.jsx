@@ -1,3 +1,4 @@
+import "./ItemDetailContainer.css";
 import Productos from "../../../src/Productos.json";
 import { useEffect, useState } from "react";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
