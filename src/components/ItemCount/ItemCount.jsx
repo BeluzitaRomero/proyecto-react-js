@@ -15,7 +15,7 @@ export function ItemCount({ stock, initial }) {
   };
 
   return (
-    <div className="itemCount">
+    <>
       <div className="seleccion">
         <div className="cantidad-seleccionada">
           <Button variant="primary" onClick={decreaseItem}>
@@ -29,6 +29,6 @@ export function ItemCount({ stock, initial }) {
 
         <Button variant="primary">Agregar producto</Button>
       </div>
-    </div>
+    </>
   );
 }

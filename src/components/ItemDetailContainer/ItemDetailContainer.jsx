@@ -25,8 +25,8 @@ export function ItemDetailContainer() {
   console.log(itemDetail);
 
   return (
-    <div>
-      <ItemDetail details={itemDetail} />
+    <div className="itemDetailContainer">
+      {itemDetail ? <ItemDetail details={itemDetail} /> : "cargando..."}
     </div>
   );
 }

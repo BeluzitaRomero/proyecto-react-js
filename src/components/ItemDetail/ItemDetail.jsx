@@ -10,7 +10,7 @@ export function ItemDetail({ details }) {
         <h1>{details.name}</h1>
         <p>{details.descripcion}</p>
         <p>${details.precio}</p>
-        <ItemCount />
+        <ItemCount stock={10} initial={1} />
       </div>
     </div>
   );
