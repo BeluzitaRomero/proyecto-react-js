@@ -4,34 +4,39 @@
     "name": "Remera Fruti Lover",
     "descripcion": "Remera 100% algodon. Talles: 12 a 18 meses, 18 a 24 meses, 3 y 4 años.",
     "precio": 750,
-    "img": "/img/grisino1.jpg"
+    "img": "/img/grisino1.jpg",
+    "categoria": "niñxs"
   },
   {
     "id": 2,
     "name": "Musculosa Pink Hearts",
     "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
     "precio": 600,
-    "img": "/img/grisino2.jpg"
+    "img": "/img/grisino2.jpg",
+    "categoria": "new"
   },
   {
     "id": 3,
-    "name": "Calza Red Hearts",
+    "name": "Body Cactus",
     "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
     "precio": 830,
-    "img": "/img/grisino3.jpg"
+    "img": "/img/grisino3.jpg",
+    "categoria": "bebes"
   },
   {
     "id": 4,
     "name": "Remera Be Happy",
     "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
     "precio": 750,
-    "img": "/img/grisino4.jpg"
+    "img": "/img/grisino4.jpg",
+    "categoria": "+10"
   },
   {
     "id": 6,
     "name": "Remera Skull Beach",
     "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
     "precio": 700,
-    "img": "/img/grisino6.jpg"
+    "img": "/img/grisino6.jpg",
+    "categoria": "sale"
   }
 ]
