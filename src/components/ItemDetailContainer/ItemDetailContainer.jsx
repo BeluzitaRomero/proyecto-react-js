@@ -32,7 +32,11 @@ export function ItemDetailContainer() {
 
   return (
     <div className="itemDetailContainer">
-      {itemDetail ? <ItemDetail details={itemDetail} /> : "cargando..."}
+      {itemDetail
+        ? itemDetail.map((itemDetail) => (
+            <ItemDetail key={itemDetail.id} details={itemDetail} />
+          ))
+        : "cargando..."}
     </div>
   );
 }
