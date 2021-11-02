@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Item = ({ item }) => {
   return (
-    <Link to="/item/2">
+    <Link to={`/item/${item.id}`}>
       <Card key={item.id} style={{ width: "16rem" }}>
         <Card.Img variant="top" src={item.img} />
         <Card.Body>

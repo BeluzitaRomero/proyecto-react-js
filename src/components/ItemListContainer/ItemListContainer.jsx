@@ -6,7 +6,7 @@ import { useParams } from "react-router";
 
 export const ItemListContainer = ({ title }) => {
   const [productos, setProductos] = useState([]);
-  const { categoriaId } = useParams;
+  const { categoriaId } = useParams();
 
   const getProductos = (data) =>
     new Promise((resolve, reject) => {

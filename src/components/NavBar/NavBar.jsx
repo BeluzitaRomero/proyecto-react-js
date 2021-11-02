@@ -25,19 +25,19 @@ export function Navbar() {
           </Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/#">
+          <Link className="nav-link" to="/categoria/niñxs">
             Niñxs
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/#">
+          <Link className="nav-link" to="/categoria/+10">
             Niñxs +10
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/#">
+          <Link className="nav-link" to="/categoria/sale">
             SALE!
-          </a>
+          </Link>
         </li>
       </ul>
       <div className="carrito">

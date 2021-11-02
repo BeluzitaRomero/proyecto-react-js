@@ -2,9 +2,13 @@ import "./ItemDetailContainer.css";
 import Productos from "../../../src/Productos.json";
 import { useEffect, useState } from "react";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router";
 
 export function ItemDetailContainer() {
   const [itemDetail, setItemDetail] = useState();
+
+  const { itemDetailId } = useParams();
+  const itemId = parseInt(itemDetailId);
 
   const getItemDetail = (data) =>
     new Promise((resolve, reject) => {
@@ -18,12 +22,13 @@ export function ItemDetailContainer() {
     });
 
   useEffect(() => {
-    getItemDetail(Productos[0])
-      .then((result) => setItemDetail(result))
-      .catch((err) => console.log(err));
-  }, []);
+    getItemDetail(Productos)
+      .then((result) => {
+        setItemDetail(result.filter((details) => details.id === itemId));
+      })
 
-  console.log(itemDetail);
+      .catch((err) => console.log(err));
+  }, [itemId]);
 
   return (
     <div className="itemDetailContainer">
