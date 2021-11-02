@@ -7,8 +7,7 @@ import { useParams } from "react-router";
 export function ItemDetailContainer() {
   const [itemDetail, setItemDetail] = useState();
 
-  const { itemDetailId } = useParams();
-  const itemId = parseInt(itemDetailId);
+  const { itemId } = useParams();
 
   const getItemDetail = (data) =>
     new Promise((resolve, reject) => {
@@ -24,7 +23,12 @@ export function ItemDetailContainer() {
   useEffect(() => {
     getItemDetail(Productos)
       .then((result) => {
-        setItemDetail(result.filter((details) => details.id === itemId));
+        const resultado = result.filter((details) => details.id === itemId);
+
+        console.log("este es result:", result);
+        console.log("este es itemId:", itemId);
+        setItemDetail(resultado);
+        console.log(resultado);
       })
 
       .catch((err) => console.log(err));
