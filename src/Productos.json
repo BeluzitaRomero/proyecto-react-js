@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "name": "Remera Fruti Lover",
     "descripcion": "Remera 100% algodon. Talles: 12 a 18 meses, 18 a 24 meses, 3 y 4 años.",
     "precio": 750,
@@ -8,7 +8,7 @@
     "categoria": "niñxs"
   },
   {
-    "id": 2,
+    "id": "2",
     "name": "Musculosa Pink Hearts",
     "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
     "precio": 600,
@@ -16,7 +16,7 @@
     "categoria": "new"
   },
   {
-    "id": 3,
+    "id": " 3",
     "name": "Body Cactus",
     "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
     "precio": 830,
@@ -24,7 +24,7 @@
     "categoria": "bebes"
   },
   {
-    "id": 4,
+    "id": "4",
     "name": "Remera Be Happy",
     "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
     "precio": 750,
@@ -32,7 +32,7 @@
     "categoria": "+10"
   },
   {
-    "id": 6,
+    "id": " 5",
     "name": "Remera Skull Beach",
     "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
     "precio": 700,
