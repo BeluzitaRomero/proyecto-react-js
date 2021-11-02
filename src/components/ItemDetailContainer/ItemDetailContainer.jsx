@@ -23,7 +23,7 @@ export function ItemDetailContainer() {
   useEffect(() => {
     getItemDetail(Productos)
       .then((result) => {
-        setItemDetail(result.filter((details) => details.id === itemId));
+        setItemDetail(result.find((details) => details.id === itemId));
       })
       .catch((err) => console.log(err));
   }, [itemId]);
@@ -32,11 +32,7 @@ export function ItemDetailContainer() {
 
   return (
     <div className="itemDetailContainer">
-      {itemDetail
-        ? itemDetail.map((itemDetail) => (
-            <ItemDetail key={itemDetail.id} details={itemDetail} />
-          ))
-        : "cargando..."}
+      {itemDetail ? <ItemDetail details={itemDetail} /> : "cargando..."}
     </div>
   );
 }
