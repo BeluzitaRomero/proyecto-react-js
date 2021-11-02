@@ -23,16 +23,12 @@ export function ItemDetailContainer() {
   useEffect(() => {
     getItemDetail(Productos)
       .then((result) => {
-        const resultado = result.filter((details) => details.id === itemId);
-
-        console.log("este es result:", result);
-        console.log("este es itemId:", itemId);
-        setItemDetail(resultado);
-        console.log(resultado);
+        setItemDetail(result.filter((details) => details.id === itemId));
       })
-
       .catch((err) => console.log(err));
   }, [itemId]);
+
+  console.log(itemDetail, "este es ItemDetail");
 
   return (
     <div className="itemDetailContainer">
