@@ -5,7 +5,7 @@ export function ItemDetail({ details }) {
   return (
     <div className="item-detail">
       <div className="item-detail-img">
-        <img src={details.img} alt={details.name} />
+        <img className="detail-img" src={details.img} alt={details.name} />
       </div>
       <div className="detalle">
         <h1>{details.name}</h1>

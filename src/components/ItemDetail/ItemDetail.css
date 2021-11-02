@@ -7,6 +7,10 @@
   padding: 1rem;
 }
 
+.detail-img {
+  width: 25rem;
+}
+
 .detalle {
   display: flex;
   flex-direction: column;
