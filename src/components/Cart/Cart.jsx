@@ -1,3 +1,3 @@
-export function Cart({ count }) {
+export function Cart() {
   return <h1>Productos en carrito</h1>;
 }

@@ -30,7 +30,6 @@ export function ItemDetail({ details }) {
 
   const toCart = (count) => {
     setflag(false);
-    setCount(count);
   };
 
   return (
