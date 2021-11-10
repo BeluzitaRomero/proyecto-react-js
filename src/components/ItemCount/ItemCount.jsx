@@ -2,7 +2,7 @@ import "./ItemCount.css";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 
-export function ItemCount({ inStock, toCart }) {
+export function ItemCount({ inStock, onAdd }) {
   const [stock, setStock] = useState(inStock);
 
   const [count, setCount] = useState(0);
@@ -41,8 +41,14 @@ export function ItemCount({ inStock, toCart }) {
           </Button>
         </div>
 
-        <Button id="btn-agregar" variant="primary" onClick={toCart}>
-          Agregar producto
+        <Button
+          id="btn-agregar"
+          variant="primary"
+          onClick={() => {
+            onAdd(count);
+          }}
+        >
+          Agregar al carrito
         </Button>
       </div>
     </>

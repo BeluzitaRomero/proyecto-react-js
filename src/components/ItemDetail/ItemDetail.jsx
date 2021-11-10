@@ -7,8 +7,13 @@ import { Link } from "react-router-dom";
 export function ItemDetail({ details }) {
   const [cartButton, setCartButton] = useState(true);
 
-  const toCart = () => {
-    setCartButton(false);
+  const [quantityToAdd, setQuantityToAdd] = useState(null);
+
+  const onAdd = (quantityToAdd) => {
+    if (quantityToAdd >= 1) {
+      setQuantityToAdd(quantityToAdd);
+      setCartButton(false);
+    }
   };
 
   return (
@@ -22,10 +27,10 @@ export function ItemDetail({ details }) {
         <p>${details.precio}</p>
         <p>(Stock:{details.stock})</p>
         {cartButton ? (
-          <ItemCount inStock={details.stock} toCart={toCart} />
+          <ItemCount inStock={details.stock} onAdd={onAdd} />
         ) : (
           <Link to="/cart">
-            <Button>Ir al carrito</Button>
+            <Button>Ver {quantityToAdd} productos en el carrito</Button>
           </Link>
         )}
       </div>
