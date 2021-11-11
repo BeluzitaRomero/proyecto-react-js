@@ -25,8 +25,8 @@ export function CartContextProvider({ children }) {
     return isIn;
   };
 
-  const removeItem = (item) => {
-    const refreshProd = cart.filter((prod) => prod.id !== item.id);
+  const removeItem = (id) => {
+    const refreshProd = cart.filter((prod) => prod.id !== id);
     setCart(refreshProd);
     console.log(cart, "producto eliminado");
   };

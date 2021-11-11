@@ -14,7 +14,11 @@ export function Cart() {
       <div className="productos-en-carrito">
         {cart.length
           ? cart.map((inCart) => (
-              <CartItem key={inCart.id} item={inCart} remove={removeItem} />
+              <CartItem
+                key={inCart.id}
+                item={inCart}
+                remove={() => removeItem(inCart.id)}
+              />
             ))
           : "vacio"}
       </div>
