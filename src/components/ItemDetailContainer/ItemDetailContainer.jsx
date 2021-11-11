@@ -28,11 +28,9 @@ export function ItemDetailContainer() {
       .catch((err) => console.log(err));
   }, [itemId]);
 
-  console.log(itemDetail, "este es ItemDetail");
-
   return (
     <div className="itemDetailContainer">
-      {itemDetail ? <ItemDetail details={itemDetail} /> : "cargando..."}
+      {itemDetail ? <ItemDetail item={itemDetail} /> : "cargando..."}
     </div>
   );
 }
