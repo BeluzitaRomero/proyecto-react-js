@@ -7,7 +7,7 @@ export const CartItem = ({ item, remove }) => {
         <Card.Img variant="top" src={item.img} />
         <Card.Body>
           <Card.Title>{item.name}</Card.Title>
-          <p>En carrito:{item.quantity}</p>
+          <p>En carrito:{item.cantidad}</p>
           <Card.Text>{item.descripcion}</Card.Text>
           <Button id={`btn${item.id}`} variant="primary" onClick={remove}>
             Eliminar

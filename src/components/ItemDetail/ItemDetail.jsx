@@ -10,15 +10,13 @@ export function ItemDetail({ item }) {
 
   const [cartButton, setCartButton] = useState(true);
 
-  const [quantityToAdd, setQuantityToAdd] = useState(null);
+  const [quantity, setQuantity] = useState(null);
 
-  const onAdd = (quantityToAdd) => {
-    if (quantityToAdd >= 1) {
-      setQuantityToAdd(quantityToAdd);
+  const onAdd = (quantity) => {
+    if (quantity >= 1) {
+      setQuantity(quantity);
       setCartButton(false);
-      item.quantity = quantityToAdd;
-      addItem(item);
-      console.log(item, "MIRAR ACA SI AGREGO CANTIDAD");
+      addItem(item, quantity);
     }
   };
 
@@ -37,7 +35,7 @@ export function ItemDetail({ item }) {
         ) : (
           <Link to="/cart">
             <Button onClick={() => onAdd({ addItem })}>
-              Ver {quantityToAdd} productos en el carrito
+              Ver {quantity} productos en el carrito
             </Button>
           </Link>
         )}
