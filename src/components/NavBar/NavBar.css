@@ -4,12 +4,25 @@
   align-items: center;
 }
 
+.navbar-style {
+  background: linear-gradient(
+    180deg,
+    rgba(33, 37, 41, 0.9363095580028886) 51%,
+    rgba(70, 150, 231, 0.919502835313813) 100%
+  );
+}
 
 .logo-moon {
   margin-right: 0;
+  display: flex;
+  align-items: center;
 }
 
-
+.logo-titulo {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
 
 .nav-brand {
   color: white;
@@ -28,12 +41,11 @@
   text-decoration: none;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   .contenedor {
     display: flex;
     justify-content: center;
   }
-
 }
 
 @media only screen and (max-width: 480px) {
@@ -46,6 +58,4 @@
     flex-direction: column;
     align-items: center;
   }
-
-  
 }
