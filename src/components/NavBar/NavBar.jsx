@@ -39,9 +39,7 @@ export function NavBar() {
           </Nav>
         </Navbar.Collapse>
         <div className="cart-div">
-          <Link to="/cart">
-            <CartWidet />
-          </Link>
+          <CartWidet />
         </div>
       </Container>
     </Navbar>

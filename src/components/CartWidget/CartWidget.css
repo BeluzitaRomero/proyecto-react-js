@@ -1,5 +1,25 @@
+.cart-container {
+  display: flex;
+  align-items: center;
+}
+
 .cart {
   margin: 2rem;
+}
+
+.productos-carrito {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+
+  border-radius: 0.5rem;
+  height: 22px;
+  width: 22px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: red;
 }
 
 @media only screen and (max-width: 480px) {
