@@ -1,6 +1,7 @@
 .item-detail {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .item-detail-img {
@@ -21,4 +22,16 @@
 
 .descripcion {
   width: 20rem;
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 67%;
+  }
+
+  .item-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

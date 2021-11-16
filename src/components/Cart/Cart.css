@@ -10,3 +10,9 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 67%;
+  }
+}

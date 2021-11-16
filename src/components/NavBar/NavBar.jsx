@@ -44,9 +44,8 @@ export function NavBar() {
             </li>
           </ul>
         </Navbar.Collapse>
-        <div className="carrito">
-          <CartWidet />
-        </div>
+
+        <CartWidet />
       </Container>
     </Navbar>
   );

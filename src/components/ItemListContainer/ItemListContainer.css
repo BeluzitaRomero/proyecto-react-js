@@ -30,3 +30,9 @@ h1 {
 .card-body {
   color: rgb(85, 82, 245);
 }
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 67%;
+  }
+}

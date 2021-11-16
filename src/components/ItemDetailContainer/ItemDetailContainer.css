@@ -3,3 +3,9 @@
   background-image: url("../../assets/abstract-pastel-holographic-textured-background.jpg");
   background-repeat: repeat;
 }
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 67%;
+  }
+}

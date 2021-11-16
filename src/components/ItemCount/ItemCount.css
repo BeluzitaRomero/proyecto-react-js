@@ -14,3 +14,9 @@
 .producto-seleccionado {
   margin: 0 3rem;
 }
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 67%;
+  }
+}

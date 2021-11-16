@@ -31,10 +31,23 @@
   text-decoration: none;
 }
 
+@media only screen and (max-width: 768px){
+  .contenedor {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media only screen and (max-width: 480px) {
+  html {
+    font-size: 67%;
+  }
+
   .contenedor {
     display: flex !important;
     flex-direction: column;
     align-items: center;
   }
+
+  
 }
