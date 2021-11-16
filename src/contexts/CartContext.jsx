@@ -28,25 +28,27 @@ export function CartContextProvider({ children }) {
     }
   };
 
-  //ESTA NO ESTA ANDANDO MUY BIEN-----!!!!!!!!!!!!!! No me filtra por id, name, etc.
-
   const removeItem = (item) => {
-    const refreshProd = cart.find((prod) => prod.cantidad > 1);
-    console.log(refreshProd, "este es refresh");
+    //que busque el producto cuando tiene cantidad mayor a 1 y el id,
+    // por si otros tambien tienen mas de 1 y que no me encuentre el incorrecto
+    const eliminarCantidad = cart.find(
+      (prod) => prod.cantidad > 1 && prod.id === item.id
+    );
 
-    if (refreshProd) {
-      refreshProd.cantidad = refreshProd.cantidad - 1;
-      const nuevoItem = { item, cantidad: refreshProd.cantidad };
+    if (eliminarCantidad) {
+      eliminarCantidad.cantidad = eliminarCantidad.cantidad - 1;
+      const nuevoItem = { item, cantidad: eliminarCantidad.cantidad };
       console.log(nuevoItem);
 
       setCart([...cart]);
-
       console.log("entro por el if");
+
     } else {
-      //No le llegan los atributos, por eso no esta encontrando por find y no se puede encontrar el indice para borrar
-      const refreshCart = cart.find((p) => p.id === item.id);
-      console.log(refreshCart, "este es refresh cart por else");
-      const index = cart.indexOf(refreshCart);
+      const eliminarProducto = cart.find(
+        (p) => p.id === item.id && p.cantidad === 1
+      );
+      console.log(eliminarProducto, "este es refresh cart por else");
+      const index = cart.indexOf(eliminarProducto);
       cart.splice(index, 1);
 
       setCart([...cart]);

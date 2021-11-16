@@ -1,5 +1,6 @@
-import { Button } from "react-bootstrap";
 import "./Cart.css";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { useCartContext } from "../../contexts/CartContext";
 import { CartItem } from "../CartItem/CartItem";
 
@@ -17,12 +18,19 @@ export function Cart() {
               <CartItem
                 key={inCart.id}
                 item={inCart}
-                remove={() => removeItem(inCart.id)}
+                remove={() => removeItem(inCart)}
+                total={inCart.precio * inCart.cantidad}
               />
             ))
-          : "vacio"}
+          : "Tu carrito está vacío! :("}
       </div>
-      <Button onClick={clear}>Vaciar carrito</Button>
+      {cart.length ? (
+        <Button onClick={clear}>Vaciar carrito</Button>
+      ) : (
+        <Link to="/">
+          <Button>Volver a seccion de compra</Button>
+        </Link>
+      )}
     </div>
   );
 }
