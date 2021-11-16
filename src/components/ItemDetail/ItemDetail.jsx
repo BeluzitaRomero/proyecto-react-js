@@ -34,9 +34,7 @@ export function ItemDetail({ item }) {
           <ItemCount inStock={item.stock} onAdd={onAdd} />
         ) : (
           <Link to="/cart">
-            <Button onClick={() => onAdd({ addItem })}>
-              Ver {quantity} productos en el carrito
-            </Button>
+            <Button>Ver {quantity} productos en el carrito</Button>
           </Link>
         )}
       </div>

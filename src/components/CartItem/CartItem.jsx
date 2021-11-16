@@ -9,7 +9,12 @@ export const CartItem = ({ item, remove }) => {
           <Card.Title>{item.name}</Card.Title>
           <p>En carrito:{item.cantidad}</p>
           <Card.Text>{item.descripcion}</Card.Text>
-          <Button id={`btn${item.id}`} variant="primary" onClick={remove}>
+          <p>${item.precio}</p>
+          <Button
+            id={`btn-remove-${item.id}`}
+            variant="primary"
+            onClick={remove}
+          >
             Eliminar
           </Button>
         </Card.Body>

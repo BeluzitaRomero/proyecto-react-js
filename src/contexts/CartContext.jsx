@@ -24,10 +24,12 @@ export function CartContextProvider({ children }) {
 
       addQuantity.cantidad = addQuantity.cantidad + quantity;
       console.log(addQuantity, "este es quantity");
+      setCart([...cart]);
     }
   };
 
-  //ESTA NO ESTA ANDANDO MUY BIEN
+  //ESTA NO ESTA ANDANDO MUY BIEN-----!!!!!!!!!!!!!! No me filtra por id, name, etc.
+
   const removeItem = (item) => {
     const refreshProd = cart.find((prod) => prod.cantidad > 1);
     console.log(refreshProd, "este es refresh");
@@ -36,18 +38,19 @@ export function CartContextProvider({ children }) {
       refreshProd.cantidad = refreshProd.cantidad - 1;
       const nuevoItem = { item, cantidad: refreshProd.cantidad };
       console.log(nuevoItem);
-      // FUNCIONA SOLO POR CONSOLA
+
+      setCart([...cart]);
 
       console.log("entro por el if");
     } else {
-      const refreshCart = cart.filter(
-        (p) => p.name === item.name && p.cantidad === 1
-      );
-      cart.splice(refreshCart);
-      //FUNCIONA SOLO POR CONSOLA
-      console.log("entro por el else");
+      //No le llegan los atributos, por eso no esta encontrando por find y no se puede encontrar el indice para borrar
+      const refreshCart = cart.find((p) => p.id === item.id);
+      console.log(refreshCart, "este es refresh cart por else");
+      const index = cart.indexOf(refreshCart);
+      cart.splice(index, 1);
+
+      setCart([...cart]);
     }
-    console.log(cart, "producto eliminado");
   };
 
   const clear = () => {
