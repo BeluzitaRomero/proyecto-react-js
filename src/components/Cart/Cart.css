@@ -6,6 +6,10 @@
   text-align: center;
 }
 
+.titulo {
+  margin: 2rem;
+}
+
 .productos-en-carrito {
   display: flex;
   justify-content: center;
@@ -17,11 +21,16 @@
 }
 
 .empty-cart {
-  margin-bottom: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
 }
 
 .img-empty {
   width: 25rem;
+}
+
+.btn-volver-shop{
+  margin: 2rem !important;
 }
 
 .total-a-pagar {

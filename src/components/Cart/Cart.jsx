@@ -17,7 +17,7 @@ export function Cart() {
 
   return (
     <div className="cart">
-      <h1 className="titulo">Productos en carrito</h1>
+      <h1 className="titulo">Carrito de compras</h1>
       <div className="productos-en-carrito">
         {cart.length ? (
           cart.map((inCart) => (
@@ -41,18 +41,19 @@ export function Cart() {
           </div>
         )}
       </div>
-      <div>
-        <p className="total-a-pagar">Total a pagar: ${totalAPagar}</p>
-        <Button>Finalizar compra</Button>
-      </div>
-
+     
       {cart.length ? (
+        <div>
         <Button className="btn-clear" onClick={clear}>
-          Vaciar carrito
-        </Button>
+            Vaciar carrito
+          </Button>
+          <p className="total-a-pagar">Total a pagar: ${totalAPagar}</p>
+          <Button>Finalizar compra</Button>
+        </div>
+  
       ) : (
         <Link to="/">
-          <Button>Volver a seccion de compra</Button>
+          <Button className="btn-volver-shop">Volver a seccion de compra</Button>
         </Link>
       )}
     </div>

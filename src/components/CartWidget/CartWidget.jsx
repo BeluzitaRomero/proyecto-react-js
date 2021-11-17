@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export const CartWidet = (props) => {
   const { cart } = useCartContext();
-  console.log("carrito", cart);
+
 
   const totalProductos = cart.reduce(
     (counter, item) => counter + item.cantidad,
