@@ -5,7 +5,7 @@ import { useCartContext } from "../../contexts/CartContext";
 import { CartItem } from "../CartItem/CartItem";
 
 export function Cart() {
-  const { cart, clear, removeItem } = useCartContext();
+  const { cart, clear, removeItem, removeProduct } = useCartContext();
 
   console.log(cart);
 
@@ -18,7 +18,8 @@ export function Cart() {
               <CartItem
                 key={inCart.id}
                 item={inCart}
-                remove={() => removeItem(inCart)}
+                removeItem={() => removeItem(inCart)}
+                removeProd={() => removeProduct(inCart)}
                 total={inCart.precio * inCart.cantidad}
               />
             ))

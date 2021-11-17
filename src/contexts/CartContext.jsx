@@ -42,17 +42,18 @@ export function CartContextProvider({ children }) {
 
       setCart([...cart]);
       console.log("entro por el if");
-
-    } else {
-      const eliminarProducto = cart.find(
-        (p) => p.id === item.id && p.cantidad === 1
-      );
-      console.log(eliminarProducto, "este es refresh cart por else");
-      const index = cart.indexOf(eliminarProducto);
-      cart.splice(index, 1);
-
-      setCart([...cart]);
     }
+  };
+
+  const removeProduct = (item) => {
+    const eliminarProducto = cart.find(
+      (p) => p.id === item.id && p.cantidad === 1
+    );
+    console.log(eliminarProducto, "este es refresh cart por else");
+    const index = cart.indexOf(eliminarProducto);
+    cart.splice(index, 1);
+
+    setCart([...cart]);
   };
 
   const clear = () => {
@@ -60,7 +61,9 @@ export function CartContextProvider({ children }) {
   };
 
   return (
-    <CartContext.Provider value={{ cart, addItem, removeItem, clear }}>
+    <CartContext.Provider
+      value={{ cart, addItem, removeItem, removeProduct, clear }}
+    >
       {children}
     </CartContext.Provider>
   );
