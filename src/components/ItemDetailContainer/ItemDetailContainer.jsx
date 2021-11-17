@@ -3,6 +3,7 @@ import Productos from "../../../src/Productos.json";
 import { useEffect, useState } from "react";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router";
+import cute from "../../assets/cute.png";
 
 export function ItemDetailContainer() {
   const [itemDetail, setItemDetail] = useState();
@@ -30,7 +31,18 @@ export function ItemDetailContainer() {
 
   return (
     <div className="itemDetailContainer">
-      {itemDetail ? <ItemDetail item={itemDetail} /> : "cargando..."}
+      {itemDetail ? (
+        <ItemDetail item={itemDetail} />
+      ) : (
+        <div className="img-detail-carga">
+          <img
+            className="img-detail-carga"
+            src={cute}
+            alt="saludo astronauta"
+          />
+          <h2>¡Buenisima elección!</h2>
+        </div>
+      )}
     </div>
   );
 }

@@ -2,6 +2,13 @@
   padding: 2rem;
   background-image: url("../../assets/abstract-pastel-holographic-textured-background.jpg");
   background-repeat: repeat;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.img-detail-carga {
+  width: 25rem;
 }
 
 @media only screen and (max-width: 480px) {

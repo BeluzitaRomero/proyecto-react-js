@@ -7,6 +7,10 @@
   flex-wrap: wrap;
 }
 
+.img-list-carga {
+  width: 30rem;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 67%;
