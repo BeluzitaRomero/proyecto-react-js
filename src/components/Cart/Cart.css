@@ -16,6 +16,10 @@
   margin: 0 !important;
 }
 
+.img-empty {
+  width: 25rem;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 67%;
