@@ -7,6 +7,10 @@
   justify-content: center;
 }
 
+.item-detail-carga {
+  margin-bottom: 6rem;
+}
+
 .img-detail-carga {
   width: 25rem;
 }

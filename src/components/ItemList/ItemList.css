@@ -7,6 +7,10 @@
   flex-wrap: wrap;
 }
 
+.item-list {
+  margin-bottom: 5rem;
+}
+
 .img-list-carga {
   width: 30rem;
 }

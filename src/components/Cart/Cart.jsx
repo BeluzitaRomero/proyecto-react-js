@@ -30,7 +30,7 @@ export function Cart() {
             />
           ))
         ) : (
-          <div>
+          <div className="empty-cart">
             <img
               className="img-empty"
               src={globos}

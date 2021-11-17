@@ -34,7 +34,7 @@ export function ItemDetailContainer() {
       {itemDetail ? (
         <ItemDetail item={itemDetail} />
       ) : (
-        <div className="img-detail-carga">
+        <div className="item-detail-carga">
           <img
             className="img-detail-carga"
             src={cute}

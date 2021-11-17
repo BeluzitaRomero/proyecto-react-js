@@ -5,7 +5,7 @@ import "./Item.css";
 
 export const Item = ({ item }) => {
   return (
-    <Card className="card" key={item.id} style={{ width: "16rem" }}>
+    <Card className="card" key={item.id} style={{ width: "14rem" }}>
       <Link to={`/item/${item.id}`}>
         <Card.Img variant="top" src={item.img} />
       </Link>

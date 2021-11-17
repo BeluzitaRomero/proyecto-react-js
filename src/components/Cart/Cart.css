@@ -16,6 +16,10 @@
   margin: 0 !important;
 }
 
+.empty-cart {
+  margin-bottom: 6rem;
+}
+
 .img-empty {
   width: 25rem;
 }
