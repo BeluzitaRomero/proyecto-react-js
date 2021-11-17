@@ -26,7 +26,9 @@ export function Cart() {
           : "Tu carrito está vacío! :("}
       </div>
       {cart.length ? (
-        <Button onClick={clear}>Vaciar carrito</Button>
+        <Button className="btn-clear" onClick={clear}>
+          Vaciar carrito
+        </Button>
       ) : (
         <Link to="/">
           <Button>Volver a seccion de compra</Button>

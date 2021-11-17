@@ -5,6 +5,7 @@ import { ItemListContainer } from "./components/ItemListContainer/ItemListContai
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { Cart } from "./components/Cart/Cart";
 import { CartContextProvider } from "./contexts/CartContext";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -15,27 +16,20 @@ function App() {
         </header>
         <Switch>
           <Route exact path="/">
-            <main className="App">
-              <ItemListContainer />
-              {/* <button onClick={verContext}>Probar context</button> */}
-            </main>
+            <ItemListContainer />
+            {/* <button onClick={verContext}>Probar context</button> */}
           </Route>
           <Route exact path="/categoria/:categoriaId">
-            <main className="App">
-              <ItemListContainer />
-            </main>
+            <ItemListContainer />
           </Route>
           <Route exact path="/item/:itemId">
-            <main className="App">
-              <ItemDetailContainer />
-            </main>
+            <ItemDetailContainer />
           </Route>
           <Route exact path="/cart">
-            <main className="App">
-              <Cart />
-            </main>
+            <Cart />
           </Route>
         </Switch>
+        <Footer />
       </BrowserRouter>
     </CartContextProvider>
   );
