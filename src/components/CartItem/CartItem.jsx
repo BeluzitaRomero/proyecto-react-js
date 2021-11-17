@@ -4,12 +4,11 @@ import "./CartItem.css";
 export const CartItem = ({ item, total, removeItem, removeProd }) => {
   return (
     <>
-      <Card style={{ width: "18rem" }}>
+      <Card style={{ width: "14rem" }}>
         <Card.Img variant="top" src={item.img} />
         <Card.Body>
           <Card.Title>{item.name}</Card.Title>
           <p className="card-text">Precio: ${item.precio}</p>
-          <Card.Text>{item.descripcion}</Card.Text>
           <p className="card-text">En carrito:{item.cantidad}</p>
           <p className="card-text">Total: ${total}</p>
           <Button

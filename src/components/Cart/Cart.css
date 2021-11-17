@@ -20,6 +20,11 @@
   width: 25rem;
 }
 
+.total-a-pagar {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 67%;

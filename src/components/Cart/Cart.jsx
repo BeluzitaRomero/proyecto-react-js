@@ -10,6 +10,11 @@ export function Cart() {
 
   console.log(cart);
 
+  const totalAPagar = cart.reduce(
+    (counter, item) => counter + item.precio * item.cantidad,
+    0
+  );
+
   return (
     <div className="cart">
       <h1 className="titulo">Productos en carrito</h1>
@@ -36,6 +41,11 @@ export function Cart() {
           </div>
         )}
       </div>
+      <div>
+        <p className="total-a-pagar">Total a pagar: ${totalAPagar}</p>
+        <Button>Finalizar compra</Button>
+      </div>
+
       {cart.length ? (
         <Button className="btn-clear" onClick={clear}>
           Vaciar carrito
