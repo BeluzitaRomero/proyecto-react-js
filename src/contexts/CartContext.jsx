@@ -11,7 +11,7 @@ export function CartContextProvider({ children }) {
     //agregar cantidad en producto
     const itemQuantity = { ...item, cantidad: quantity };
 
-    //corroborar con some si el producto se encuentra en cart
+    //corroborar con some si el producto se encuentra en cart --
     const isInCart = cart.some((p) => p.id === item.id);
     if (!isInCart) {
       //se agrega el producto completo
