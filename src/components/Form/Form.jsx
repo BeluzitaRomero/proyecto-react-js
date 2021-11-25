@@ -23,9 +23,7 @@ export function Form ({total}) {
       cliente: client,
       items: cart,
       total:total
-    }// tengo problema con el total que sale como objeto total: {total: 156566}
-    //viene desde el componente Cart del "total" que le paso al componente Form
-    console.log(order)
+    }
 
 
     const db= getFirestore();
@@ -33,7 +31,7 @@ export function Form ({total}) {
 
     addDoc(ordersCollection, order).then(({id})=> {
       console.log(id);
-      alert(`Su numero de compra es ${id}`)
+      alert(`Muchas gracias por comprar en Tienda Moon ♥ Su codigo de compra es: ${id}`)
     });
     
     setClient({name: "", email: "", tel: ""})
