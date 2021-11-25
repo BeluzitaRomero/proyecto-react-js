@@ -5,8 +5,8 @@ import { useCartContext } from "../../contexts/CartContext";
 import {getFirestore} from "../../firebase/index"
 import { collection, addDoc } from "@firebase/firestore";
 
-export function Form (total) {
-  const { cart } = useCartContext();
+export function Form ({total}) {
+  const { cart, setCart } = useCartContext();
 
   const [client, setClient] = useState({name: "", email: "", tel: ""
   })
@@ -25,7 +25,7 @@ export function Form (total) {
       total:total
     }// tengo problema con el total que sale como objeto total: {total: 156566}
     //viene desde el componente Cart del "total" que le paso al componente Form
-
+    console.log(order)
 
 
     const db= getFirestore();
@@ -35,8 +35,12 @@ export function Form (total) {
       console.log(id);
       alert(`Su numero de compra es ${id}`)
     });
-        
+    
+    setClient({name: "", email: "", tel: ""})
+    setCart([]);
   }
+
+  
 
     return (
         <>
