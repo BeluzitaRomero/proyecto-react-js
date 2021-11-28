@@ -14,6 +14,10 @@ Haz click aquí 👉🏽[https://tiendamoon.netlify.app/]
 
 
 ## Descarga o clona este proyecto
+Puedes descargarlo directamente desde el botón Code >> Download ZIP o con el comando:
+### `git clone https://github.com/BeluzitaRomero/proyecto-react-js.git`
+
+### ATENCIÓN 🚨
 Para poder levantar la app, primero tienes que instalar las dependencias mediante el comando:
 ### `npm install` 
 
