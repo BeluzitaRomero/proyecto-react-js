@@ -3,10 +3,10 @@
 Tienda Moon es un proyecto e-commerce creado como entrega final del curso de React Js, brindado por CoderHouse.
 
 # Dependencias utilizadas 🔧
-React Js
-React Bootstrap 
-React Router DOM
-Firebase 
+ ✔️ React Js
+ ✔️ React Bootstrap
+ ✔️React Router DOM
+ ✔️Firebase
 
 ## Deployment 
 Echa un vistazo a la app 🔍 y simula tu compra! 👗
