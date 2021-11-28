@@ -14,7 +14,7 @@ Haz click aquí 👉🏽[https://tiendamoon.netlify.app/]
 
 
 ## Descarga o clona este proyecto
-Puedes descargarlo directamente desde el botón Code >> Download ZIP o con el comando:
+Puedes descargarlo directamente desde este repositorio en el botón Code >> Download ZIP o con el comando:
 ### `git clone https://github.com/BeluzitaRomero/proyecto-react-js.git`
 
 ### ATENCIÓN 🚨
