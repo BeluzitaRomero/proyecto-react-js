@@ -1,4 +1,4 @@
-# Tienda Moon 
+# Tienda Moon ![hola](https://i.ibb.co/prDCPf1/Astro.png)
 
 Tienda Moon es un proyecto e-commerce creado como entrega final del curso de React Js, brindado por CoderHouse.
 
