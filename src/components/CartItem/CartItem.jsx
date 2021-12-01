@@ -4,7 +4,7 @@ import "./CartItem.css";
 export const CartItem = ({ item, total, removeItem, removeProd }) => {
   return (
     <>
-      <Card style={{ width: "14rem" }}>
+      <Card style={{ width: "14rem"}}>
         <Card.Img variant="top" src={item.img} />
         <Card.Body>
           <Card.Title>{item.name}</Card.Title>

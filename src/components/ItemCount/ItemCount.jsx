@@ -2,7 +2,7 @@ import "./ItemCount.css";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
 
-export function ItemCount({ inStock, onAdd }) {
+export function ItemCount({ inStock, onAdd, updateStock}) {
   const [stock, setStock] = useState(inStock);
 
   const [count, setCount] = useState(0);
@@ -32,15 +32,10 @@ export function ItemCount({ inStock, onAdd }) {
             -
           </Button>
           <p className="producto-seleccionado">{count}</p>
-          <Button
-            variant="primary"
+          {count === updateStock? (<Button disabled> + </Button>):(<Button variant="primary"
             className="addBtn"
-            onClick={() => addItem()}
-          >
-            +
-          </Button>
+            onClick={() => addItem()}>+</Button>)}
         </div>
-
         <Button
           id="btn-agregar"
           variant="primary"

@@ -5,7 +5,7 @@ import { useCartContext } from "../../contexts/CartContext";
 import { CartItem } from "../CartItem/CartItem";
 import globos from "../../assets/globos.png";
 import { Form } from "../Form/Form";
-// import { useState } from "react";
+
 
 
 export function Cart() {
