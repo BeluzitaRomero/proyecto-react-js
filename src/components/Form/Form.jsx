@@ -3,7 +3,7 @@ import { Button} from "react-bootstrap";
 import { useState } from "react";
 import { useCartContext } from "../../contexts/CartContext";
 import {getFirestore} from "../../firebase/index"
-import { collection, addDoc } from "@firebase/firestore";
+import { collection, addDoc, doc, updateDoc } from "@firebase/firestore";
 
 export function Form ({total}) {
   const { cart, setCart } = useCartContext();
@@ -14,6 +14,7 @@ export function Form ({total}) {
   const handleClientOnChange = (e) =>{
     setClient({...client, [e.target.name]: e.target.value  })
   }
+
 
   
 
@@ -33,6 +34,15 @@ export function Form ({total}) {
       console.log(id);
       alert(`Muchas gracias por comprar en Tienda Moon ♥ Su codigo de compra es: ${id}`)
     });
+
+
+    // update stock
+    cart.forEach((item) => {
+      const docRef = doc( db, "items", item.id);
+      updateDoc(docRef, {stock: item.stock - item.cantidad});
+    })
+
+
     
     setClient({name: "", email: "", tel: ""})
     setCart([]);
