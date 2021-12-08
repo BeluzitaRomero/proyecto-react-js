@@ -7,12 +7,11 @@ import { Link } from "react-router-dom";
 export const CartWidet = (props) => {
   const { cart } = useCartContext();
 
-
   const totalProductos = cart.reduce(
     (counter, item) => counter + item.cantidad,
     0
   );
-  console.log(totalProductos, "total productos");
+
   return (
     <div className="cart-container">
       {cart.length ? (

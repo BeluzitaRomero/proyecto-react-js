@@ -16,14 +16,13 @@ export function CartContextProvider({ children }) {
     if (!isInCart) {
       //se agrega el producto completo
       setCart([...cart, itemQuantity]);
-      console.log(cart);
     } else {
       //si encuentra el producto, se suma la cantidad
       const addQuantity = cart.find((prod) => prod.id === item.id);
       //guardo el prod para poder acceder a cantidad y sumar
 
       addQuantity.cantidad = addQuantity.cantidad + quantity;
-      console.log(addQuantity, "este es quantity");
+
       setCart([...cart]);
     }
   };
@@ -41,7 +40,6 @@ export function CartContextProvider({ children }) {
       console.log(nuevoItem);
 
       setCart([...cart]);
-      console.log("entro por el if");
     }
   };
 
@@ -49,7 +47,7 @@ export function CartContextProvider({ children }) {
     const eliminarProducto = cart.find(
       (p) => p.id === item.id && p.cantidad === 1
     );
-    console.log(eliminarProducto, "este es refresh cart por else");
+
     const index = cart.indexOf(eliminarProducto);
     cart.splice(index, 1);
 
